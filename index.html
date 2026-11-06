@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Nexus - Finanças, Negócios & Tecnologia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased flex flex-col min-h-screen">
+
+  <!-- Topbar com Ticker de Alerta -->
+  <div class="bg-slate-950 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <span class="bg-red-600 text-white font-bold px-2 py-0.5 rounded text-[10px] uppercase tracking-wider">Urgente</span>
+        <span class="truncate">Alerta de golpe do Pix por aproximação atinge correntistas; veja como desativar</span>
+      </div>
+      <div class="hidden md:flex space-x-4 text-slate-400">
+        <span id="data-topo">Sexta-feira, 6 de Novembro de 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header & Logotipo Portal Nexus -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Marca Portal Nexus -->
+      <a href="#" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center text-white font-black text-xl shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
+          N
+        </div>
+        <div class="flex flex-col">
+          <span class="text-2xl font-black tracking-tight text-slate-900 leading-none">
+            PORTAL<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">NEXUS</span>
+          </span>
+          <span class="text-[9px] uppercase tracking-widest text-slate-400 font-bold mt-0.5">Finanças • Negócios • Tech</span>
+        </div>
+      </a>
+
+      <!-- Menu de Navegação -->
+      <nav class="hidden md:flex space-x-6 text-xs font-bold uppercase tracking-wider text-slate-600">
+        <a href="#destaques" class="hover:text-indigo-600 transition">Destaques</a>
+        <a href="#financas" class="hover:text-emerald-600 transition flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Finanças
+        </a>
+        <a href="#ecommerce" class="hover:text-amber-600 transition flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-amber-500"></span> E-commerce
+        </a>
+        <a href="#tecnologia" class="hover:text-blue-600 transition flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-blue-500"></span> Tecnologia
+        </a>
+      </nav>
+
+      <!-- Badge de Status -->
+      <div class="flex items-center space-x-3">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span> Ao Vivo
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Espaço do Anúncio Topo (Leaderboard 728x90 / Banner Responsivo Adsterra) -->
+  <section class="max-w-7xl mx-auto w-full px-4 pt-6">
+    <div class="w-full bg-slate-200 border-2 border-dashed border-slate-300 rounded-xl py-5 px-4 text-center text-xs text-slate-500 font-medium tracking-wide">
+      <!-- ADSTERRA SCRIPT BANNER LEADERBOARD 728x90 -->
+      [ ESPAÇO PUBLICITÁRIO ADSTERRA: BANNER LEADERBOARD 728x90 / RESPONSIVO ]
+    </div>
+  </section>
+
+  <!-- Conteúdo Principal -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-grow">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+      <!-- Coluna Principal (Artigos dos 3 Nichos) -->
+      <div class="lg:col-span-8 space-y-10">
+
+        <!-- Destaque Principal Cruzado -->
+        <section id="destaques">
+          <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition">
+            <div class="relative bg-gradient-to-tr from-slate-950 via-slate-900 to-indigo-950 text-white p-8 md:p-10 flex flex-col justify-end min-h-[320px]">
+              <span class="inline-block bg-emerald-500 text-slate-950 text-xs font-bold px-3 py-1 rounded-full w-max mb-3 uppercase tracking-wider">
+                Finanças & Rendimentos
+              </span>
+              <h1 class="text-2xl md:text-4xl font-extrabold leading-tight mb-3">
+                R$ 1.000 no Tesouro Selic, Nubank ou Poupança: Quanto Rende por Mês com as Novas Taxas?
+              </h1>
+              <p class="text-slate-300 text-sm md:text-base leading-relaxed line-clamp-2">
+                Simulação comparativa detalhada descontando a alíquota de Imposto de Renda e avaliando a liquidez diária para compor sua reserva com total segurança.
+              </p>
+              <div class="mt-5 flex items-center text-xs text-slate-400 space-x-4">
+                <span>Leitura: 4 min</span>
+                <span>•</span>
+                <span>Atualizado hoje</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- Bloco de Anúncio In-Content (Native Banner Adsterra) -->
+        <div class="w-full bg-slate-100 border border-slate-200 rounded-xl py-4 text-center text-xs text-slate-500 font-medium">
+          <!-- ADSTERRA SCRIPT BANNER NATIVO IN-FEED -->
+          [ ESPAÇO PUBLICITÁRIO ADSTERRA: BANNER NATIVO IN-FEED 4:1 ]
+        </div>
+
+        <!-- Seção 1: Finanças & Benefícios -->
+        <section id="financas" class="space-y-4">
+          <div class="flex items-center justify-between border-b-2 border-emerald-500 pb-2">
+            <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-2.5 h-2.5 bg-emerald-500 rounded-full"></span> Finanças Práticas & Benefícios
+            </h2>
+            <a href="#" class="text-xs font-semibold text-emerald-600 hover:underline">Ver todas &rarr;</a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-emerald-300 transition flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-bold text-emerald-600 uppercase tracking-wider">Trabalho & Rescisão</span>
+                <h3 class="font-bold text-slate-900 mt-1 mb-2 hover:text-emerald-600 transition">
+                  Demissão sem justa causa: como calcular aviso prévio e férias proporcionais em 2026
+                </h3>
+                <p class="text-xs text-slate-600 line-clamp-2">Confira o cálculo com as novas bases salariais e as regras de liberação imediata do saque-aniversário.</p>
+              </div>
+              <span class="text-[11px] text-slate-400 mt-4">Hoje • Finanças</span>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-emerald-300 transition flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-bold text-emerald-600 uppercase tracking-wider">Benefícios Sociais</span>
+                <h3 class="font-bold text-slate-900 mt-1 mb-2 hover:text-emerald-600 transition">
+                  Calendário de Saques PIS/PASEP: quem tem direito ao abono e passo a passo de consulta pelo CPF
+                </h3>
+                <p class="text-xs text-slate-600 line-clamp-2">Veja os critérios de elegibilidade para trabalhadores de empresas privadas e servidores públicos.</p>
+              </div>
+              <span class="text-[11px] text-slate-400 mt-4">Ontem • Benefícios</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Seção 2: E-commerce & Vendedores Online (MEI) -->
+        <section id="ecommerce" class="space-y-4">
+          <div class="flex items-center justify-between border-b-2 border-amber-500 pb-2">
+            <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-2.5 h-2.5 bg-amber-500 rounded-full"></span> E-commerce, Marketplaces & MEI
+            </h2>
+            <a href="#" class="text-xs font-semibold text-amber-600 hover:underline">Ver todas &rarr;</a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-amber-300 transition flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-bold text-amber-600 uppercase tracking-wider">Marketplaces</span>
+                <h3 class="font-bold text-slate-900 mt-1 mb-2 hover:text-amber-600 transition">
+                  Taxas da Shopee vs Mercado Livre: onde o vendedor iniciante lucra mais por pedido?
+                </h3>
+                <p class="text-xs text-slate-600 line-clamp-2">Comparamos frete subsidiado, taxa de comissão fixa e tempo de repasse em conta bancária.</p>
+              </div>
+              <span class="text-[11px] text-slate-400 mt-4">Há 3 horas • Vendas</span>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-amber-300 transition flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-bold text-amber-600 uppercase tracking-wider">Regulamentação MEI</span>
+                <h3 class="font-bold text-slate-900 mt-1 mb-2 hover:text-amber-600 transition">
+                  Emissão de Nota Fiscal Obrigatória no e-commerce: como não ter a conta suspensa
+                </h3>
+                <p class="text-xs text-slate-600 line-clamp-2">Tudo o que o lojista digital precisa ajustar nos sistemas de faturamento para evitar bloqueios.</p>
+              </div>
+              <span class="text-[11px] text-slate-400 mt-4">Hoje • Fiscal</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Seção 3: Tecnologia Cotidiana & Segurança Digital -->
+        <section id="tecnologia" class="space-y-4">
+          <div class="flex items-center justify-between border-b-2 border-blue-500 pb-2">
+            <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-2.5 h-2.5 bg-blue-500 rounded-full"></span> Tecnologia Cotidiana & Golpes
+            </h2>
+            <a href="#" class="text-xs font-semibold text-blue-600 hover:underline">Ver todas &rarr;</a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-blue-300 transition flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider">Alerta de Segurança</span>
+                <h3 class="font-bold text-slate-900 mt-1 mb-2 hover:text-blue-600 transition">
+                  Novo golpe do falso comprovante no WhatsApp: como identificar chaves adulteradas
+                </h3>
+                <p class="text-xs text-slate-600 line-clamp-2">Criminosos usam aplicativos que simulam o layout bancário oficial; aprenda a checar o saldo real.</p>
+              </div>
+              <span class="text-[11px] text-slate-400 mt-4">Há 1 hora • Segurança</span>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-blue-300 transition flex flex-col justify-between">
+              <div>
+                <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider">Dicas & WhatsApp</span>
+                <h3 class="font-bold text-slate-900 mt-1 mb-2 hover:text-blue-600 transition">
+                  3 ajustes simples de privacidade no celular para impedir clonagem e roubo de dados
+                </h3>
+                <p class="text-xs text-slate-600 line-clamp-2">Passo a passo rápido para ativar autenticação em duas etapas no chip e nos principais mensageiros.</p>
+              </div>
+              <span class="text-[11px] text-slate-400 mt-4">Hoje • Dicas</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Barra Lateral (Sidebar) com Banners Fixos -->
+      <aside class="lg:col-span-4 space-y-6">
+
+        <!-- Espaço Adsterra Lateral (Retângulo 300x250) -->
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 text-center shadow-sm">
+          <div class="bg-slate-100 border-2 border-dashed border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs text-slate-500 font-medium p-4">
+            <!-- ADSTERRA SCRIPT RETÂNGULO 300x250 -->
+            [ ESPAÇO PUBLICITÁRIO ADSTERRA: RETÂNGULO MÉDIO 300x250 ]
+          </div>
+        </div>
+
+        <!-- Widget: Mais Lidas da Semana -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+          <h3 class="font-bold text-slate-900 mb-4 pb-2 border-b border-slate-100 flex items-center gap-2 text-sm">
+            🔥 Mais Lidas do Portal
+          </h3>
+          <ol class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="text-indigo-600 font-black text-lg">1</span>
+              <div>
+                <a href="#" class="text-xs font-semibold text-slate-800 hover:text-indigo-600 transition">
+                  Caixa Tem fora do ar? Veja como movimentar seu benefício
+                </a>
+                <span class="block text-[10px] text-slate-400 mt-1">12.4k leituras</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-indigo-600 font-black text-lg">2</span>
+              <div>
+                <a href="#" class="text-xs font-semibold text-slate-800 hover:text-indigo-600 transition">
+                  Shopee altera regras de envio para MEI; confira os novos prazos
+                </a>
+                <span class="block text-[10px] text-slate-400 mt-1">9.8k leituras</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-indigo-600 font-black text-lg">3</span>
+              <div>
+                <a href="#" class="text-xs font-semibold text-slate-800 hover:text-indigo-600 transition">
+                  Golpe da entrega falsa: entregadores cobram taxa inexistente
+                </a>
+                <span class="block text-[10px] text-slate-400 mt-1">7.2k leituras</span>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Segundo Espaço Adsterra Lateral (Skyscraper 300x600) -->
+        <div class="bg-white p-4 rounded-2xl border border-slate-200 text-center shadow-sm">
+          <div class="bg-slate-100 border-2 border-dashed border-slate-300 rounded-xl h-[450px] flex items-center justify-center text-xs text-slate-500 font-medium p-4">
+            <!-- ADSTERRA SCRIPT VERTICAL -->
+            [ ESPAÇO PUBLICITÁRIO ADSTERRA: VERTICAL / SKYSCRAPER 300x600 ]
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Rodapé Institucional Portal Nexus -->
+  <footer class="bg-slate-900 text-slate-400 text-xs py-10 border-t border-slate-800 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center space-x-2">
+          <div class="w-7 h-7 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-black text-sm">
+            N
+          </div>
+          <span class="text-xl font-black text-white tracking-tight">PORTAL<span class="text-indigo-500">NEXUS</span></span>
+        </div>
+        <p class="mt-3 text-slate-400 leading-relaxed text-xs">
+          Central independente de informações práticas sobre finanças pessoais, mercados de e-commerce e segurança digital.
+        </p>
+      </div>
+
+      <div class="flex flex-col space-y-2">
+        <span class="font-bold text-white uppercase tracking-wider text-[11px]">Transparência & Políticas</span>
+        <a href="#" class="hover:text-white transition">Sobre a Linha Editorial</a>
+        <a href="#" class="hover:text-white transition">Política de Privacidade & Cookies</a>
+        <a href="#" class="hover:text-white transition">Termos de Uso</a>
+        <a href="#" class="hover:text-white transition">Contato & Anuncie</a>
+      </div>
+
+      <div class="text-slate-500 flex flex-col justify-between">
+        <p>Conteúdo estritamente jornalístico e informativo de utilidade pública. Não constitui consultoria financeira ou jurídica individual.</p>
+        <p class="mt-4">© 2026 Portal Nexus. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

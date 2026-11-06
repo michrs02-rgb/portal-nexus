@@ -12,108 +12,118 @@
     body { font-family: 'Inter', sans-serif; }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased flex flex-col min-h-screen">
+<body class="bg-[#f8fafc] text-slate-900 antialiased flex flex-col min-h-screen">
 
-  <!-- Topbar Informativa -->
-  <div class="bg-slate-950 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+  <!-- Topbar com Alerta -->
+  <div class="bg-[#1e293b] text-slate-300 text-xs py-2 px-4 border-b border-slate-700">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <div class="flex items-center space-x-2">
-        <span class="bg-red-600 text-white font-bold px-2 py-0.5 rounded text-[10px] uppercase tracking-wider">Radar</span>
-        <span class="truncate">Atualizações diárias de economia prática, mercados digitais e segurança</span>
+        <span class="bg-[#dc2626] text-white font-extrabold px-2 py-0.5 rounded text-[10px] uppercase tracking-wider">URGENTE</span>
+        <span class="truncate">Sexta-feira, 6 de Novembro de 2026</span>
       </div>
-      <span class="text-slate-400 hidden sm:inline" id="data-topo"></span>
+      <span class="text-slate-400 hidden sm:inline" id="data-topo">Radar Econômico e Tecnológico em Tempo Real</span>
     </div>
   </div>
 
   <!-- Header & Logotipo Portal Nexus -->
-  <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- Marca Portal Nexus -->
+      <!-- Marca Principal -->
       <a href="#" onclick="filtrarCategoria('todas')" class="flex items-center space-x-3 group">
-        <div class="w-10 h-10 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center text-white font-black text-xl shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
+        <div class="w-12 h-12 bg-gradient-to-tr from-blue-700 via-indigo-600 to-indigo-800 rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-md">
           N
         </div>
         <div class="flex flex-col">
-          <span class="text-2xl font-black tracking-tight text-slate-900 leading-none">
-            PORTAL<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">NEXUS</span>
+          <span class="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 leading-none">
+            PORTAL <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-600">NEXUS</span>
           </span>
-          <span class="text-[9px] uppercase tracking-widest text-slate-400 font-bold mt-0.5">Finanças • Negócios • Tech</span>
+          <span class="text-[10px] uppercase tracking-widest text-slate-400 font-bold mt-1">FINANÇAS • NEGÓCIOS • TECH</span>
         </div>
       </a>
 
-      <!-- Filtro de Categorias -->
-      <nav class="hidden md:flex space-x-2 text-xs font-semibold">
-        <button onclick="filtrarCategoria('todas')" class="cat-btn px-3 py-1.5 rounded-lg bg-indigo-600 text-white transition">Todas</button>
-        <button onclick="filtrarCategoria('Finanças')" class="cat-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 transition">Finanças</button>
-        <button onclick="filtrarCategoria('E-commerce')" class="cat-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 transition">E-commerce</button>
-        <button onclick="filtrarCategoria('Tecnologia')" class="cat-btn px-3 py-1.5 rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 transition">Tecnologia</button>
+      <!-- Menu de Navegação Superior -->
+      <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-700">
+        <button onclick="filtrarCategoria('todas')" class="hover:text-blue-600 transition">Destaques</button>
+        <button onclick="filtrarCategoria('Finanças')" class="hover:text-blue-600 transition">Finanças</button>
+        <button onclick="filtrarCategoria('E-commerce')" class="hover:text-blue-600 transition">E-commerce</button>
+        <button onclick="filtrarCategoria('Tecnologia')" class="hover:text-blue-600 transition">Tecnologia</button>
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 mr-2 animate-pulse"></span> ((o)) Ao Vivo
+        </span>
       </nav>
-
-      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
-        <span class="w-2 h-2 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span> Ao Vivo
-      </span>
     </div>
   </header>
 
   <!-- Espaço do Anúncio Topo (Leaderboard Adsterra) -->
   <section class="max-w-7xl mx-auto w-full px-4 pt-6">
-    <div class="w-full bg-slate-200 border-2 border-dashed border-slate-300 rounded-xl py-4 px-4 text-center text-xs text-slate-500 font-medium">
-      <!-- ADSTERRA BANNER 728x90 -->
-      [ ESPAÇO PUBLICITÁRIO ADSTERRA: BANNER LEADERBOARD 728x90 ]
+    <div class="w-full bg-[#e5e7eb] border border-slate-300 rounded-xl py-8 px-4 flex items-center justify-center text-sm md:text-base font-bold text-slate-600 tracking-wide text-center">
+      <!-- ADSTERRA SCRIPT BANNER 728x90 -->
+      [ESPAÇO PUBLICITÁRIO ADSTERRA]
     </div>
   </section>
 
-  <!-- Feed de Notícias -->
+  <!-- Seção Hero Idêntica à Foto -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-grow">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
 
-      <!-- Coluna Principal (Feed Dinâmico) -->
-      <div class="lg:col-span-8 space-y-6">
-        <div class="flex items-center justify-between border-b border-slate-200 pb-3">
-          <h2 class="text-xl font-extrabold text-slate-900" id="titulo-secao">Últimas Publicações</h2>
-          <span class="text-xs text-slate-400 font-medium" id="contador-artigos">Carregando...</span>
-        </div>
-
-        <!-- Container onde o JS vai renderizar os cards com foto -->
-        <div id="artigos-container" class="space-y-6">
-          <p class="text-slate-400 text-sm">Carregando artigos...</p>
+      <!-- Coluna Esquerda: Manchete Principal Escura -->
+      <div class="lg:col-span-7">
+        <div id="card-hero" class="bg-[#1e293b] rounded-2xl p-8 md:p-10 text-white min-h-[460px] flex flex-col justify-between shadow-xl cursor-pointer hover:border-slate-500 border border-transparent transition">
+          <!-- Conteúdo dinâmico preenchido pelo 1º artigo -->
         </div>
       </div>
 
-      <!-- Barra Lateral (Sidebar) com Banners Fixos -->
-      <aside class="lg:col-span-4 space-y-6">
-        <!-- Banner Retângulo 300x250 -->
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm text-center">
-          <div class="bg-slate-100 border-2 border-dashed border-slate-300 rounded-xl h-[250px] flex items-center justify-center text-xs text-slate-500 font-medium p-4">
-            <!-- ADSTERRA SCRIPT 300x250 -->
-            [ ADSTERRA: RETÂNGULO 300x250 ]
+      <!-- Coluna Direita: Anúncio Retângulo + Skyscraper Lateral + Mais Lidas -->
+      <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-12 gap-4">
+
+        <!-- Bloco Anúncio Médio -->
+        <div class="sm:col-span-8 flex flex-col gap-4">
+          <div class="bg-[#e5e7eb] rounded-2xl h-[260px] flex flex-col items-center justify-center p-6 text-center text-sm font-bold text-slate-600 border border-slate-300">
+            <!-- ADSTERRA RETÂNGULO 300x250 -->
+            <span>[ESPAÇO PUBLICITÁRIO ADSTERRA]</span>
+          </div>
+
+          <!-- Widget: Mais Lidas do Portal -->
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+            <h3 class="font-bold text-slate-900 text-sm mb-4 flex items-center gap-2">
+              <span>🔥</span> Mais Lidas do Portal
+            </h3>
+            <div id="lista-mais-lidas" class="space-y-4">
+              <!-- Preenchido dinamicamente -->
+            </div>
           </div>
         </div>
 
-        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-bold text-slate-900 text-sm mb-2 flex items-center gap-2">
-            <span>🛡️</span> Informação Verificada
-          </h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Curadoria diária das principais atualizações sobre rendimentos, regras tributárias e segurança digital para você tomar decisões bem informado.
-          </p>
-        </div>
-
-        <!-- Banner Vertical 300x600 -->
-        <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm text-center">
-          <div class="bg-slate-100 border-2 border-dashed border-slate-300 rounded-xl h-[450px] flex items-center justify-center text-xs text-slate-500 font-medium p-4">
-            <!-- ADSTERRA SCRIPT 300x600 -->
-            [ ADSTERRA: VERTICAL / SKYSCRAPER 300x600 ]
+        <!-- Banner Skyscraper Vertical -->
+        <div class="sm:col-span-4">
+          <div class="bg-[#e5e7eb] rounded-2xl min-h-[430px] flex items-center justify-center p-4 text-xs font-bold text-slate-500 border border-slate-300 text-center">
+            <!-- ADSTERRA VERTICAL 300x600 -->
+            <span>Skyscraper</span>
           </div>
         </div>
-      </aside>
+
+      </div>
 
     </div>
+
+    <!-- Grade Inferior com o Restante dos Artigos -->
+    <div class="mt-12 border-t border-slate-200 pt-8">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="text-xl font-black text-slate-900" id="titulo-secao">Outras Notícias Importantes</h2>
+        <span class="text-xs text-slate-500 font-semibold" id="contador-artigos"></span>
+      </div>
+
+      <div id="grade-noticias" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Outros cards carregados via JS -->
+      </div>
+    </div>
+
   </main>
 
-  <!-- Modal de Leitura Completa da Notícia (Abre ao Clicar) -->
-  <div id="artigo-modal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+  <!-- Modal de Leitura Completa da Notícia -->
+  <div id="artigo-modal" class="fixed inset-0 bg-slate-950/75 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
     <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-8 relative shadow-2xl border border-slate-100">
       <button onclick="fecharModal()" class="absolute top-4 right-4 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-full w-9 h-9 flex items-center justify-center font-bold text-sm transition">
         ✕
@@ -122,114 +132,129 @@
     </div>
   </div>
 
-  <!-- Rodapé Institucional -->
-  <footer class="bg-slate-900 text-slate-400 text-xs py-10 border-t border-slate-800 mt-12">
+  <!-- Rodapé Institucional Portal Nexus -->
+  <footer class="bg-slate-900 text-slate-400 text-xs py-10 border-t border-slate-800 mt-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
       <div>
         <div class="flex items-center space-x-2">
-          <div class="w-7 h-7 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-black text-sm">N</div>
+          <div class="w-8 h-8 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-black text-sm">N</div>
           <span class="text-xl font-black text-white tracking-tight">PORTAL<span class="text-indigo-500">NEXUS</span></span>
         </div>
-        <p class="mt-3 text-slate-400 leading-relaxed text-xs">
-          Central independente de informações práticas sobre finanças pessoais, mercados de e-commerce e segurança digital.
+        <p class="mt-3 text-slate-400 text-xs leading-relaxed">
+          Central independente de informações práticas sobre finanças cotidianas, comércio digital e tecnologia.
         </p>
       </div>
 
       <div class="flex flex-col space-y-2">
-        <span class="font-bold text-white uppercase tracking-wider text-[11px]">Transparência & Políticas</span>
-        <a href="#" class="hover:text-white transition">Sobre a Linha Editorial</a>
+        <span class="font-bold text-white uppercase tracking-wider text-[11px]">Transparência</span>
+        <a href="#" class="hover:text-white transition">Linha Editorial</a>
         <a href="#" class="hover:text-white transition">Política de Privacidade & Cookies</a>
         <a href="#" class="hover:text-white transition">Termos de Uso</a>
         <a href="#" class="hover:text-white transition">Contato</a>
       </div>
 
       <div class="text-slate-500 flex flex-col justify-between">
-        <p>Conteúdo estritamente jornalístico e informativo de utilidade pública. Não constitui consultoria financeira ou jurídica individual.</p>
+        <p>Conteúdo de utilidade pública e livre circulação informativa.</p>
         <p class="mt-4">© 2026 Portal Nexus. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Script Dinâmico que Consome o artigos.json -->
+  <!-- Mecânica JavaScript -->
   <script>
-    document.getElementById('data-topo').innerText = new Date().toLocaleDateString('pt-BR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-
     let todosArtigos = [];
 
     async function carregarArtigos() {
       try {
         const res = await fetch('artigos.json');
         todosArtigos = await res.json();
-        renderizarArtigos(todosArtigos);
+        renderizarHeroEGrade(todosArtigos);
       } catch (err) {
-        document.getElementById('artigos-container').innerHTML = `
-          <div class="bg-white p-8 rounded-2xl border border-slate-200 text-center text-slate-500 text-sm">
-            Nenhum artigo encontrado. Verifique se o arquivo artigos.json está na raiz do repositório.
-          </div>
-        `;
-        document.getElementById('contador-artigos').innerText = '0 matérias';
+        document.getElementById('card-hero').innerHTML = '<p class="text-slate-400 text-sm">Aguardando artigos no repositório...</p>';
       }
     }
 
-    function renderizarArtigos(artigos) {
-      const container = document.getElementById('artigos-container');
-      container.innerHTML = '';
-      document.getElementById('contador-artigos').innerText = `${artigos.length} matérias`;
+    function renderizarHeroEGrade(artigos) {
+      if (!artigos || artigos.length === 0) return;
 
-      if (!artigos || artigos.length === 0) {
-        container.innerHTML = '<p class="text-slate-500 text-sm py-4">Nenhuma matéria encontrada.</p>';
-        return;
-      }
+      const heroContainer = document.getElementById('card-hero');
+      const gradeContainer = document.getElementById('grade-noticias');
+      const maisLidasContainer = document.getElementById('lista-mais-lidas');
 
-      artigos.forEach((art, index) => {
-        const card = document.createElement('article');
-        card.className = "bg-white p-5 md:p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col md:flex-row gap-5 items-start group";
+      gradeContainer.innerHTML = '';
+      maisLidasContainer.innerHTML = '';
+      document.getElementById('contador-artigos').innerText = `${artigos.length} publicações`;
 
-        let badgeCor = "bg-indigo-50 text-indigo-700";
-        if (art.categoria.includes("Finanças")) badgeCor = "bg-emerald-50 text-emerald-700";
-        if (art.categoria.includes("E-commerce")) badgeCor = "bg-amber-50 text-amber-700";
-        if (art.categoria.includes("Tecnologia")) badgeCor = "bg-blue-50 text-blue-700";
+      // 1. Matéria Destaque (Estilo Idêntico à Foto)
+      const destaque = artigos[0];
+      heroContainer.innerHTML = `
+        <div>
+          <span class="inline-block bg-[#059669] text-white text-[11px] font-black px-3.5 py-1 rounded-sm uppercase tracking-wider mb-6">
+            ${destaque.categoria}
+          </span>
+          <h1 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight tracking-tight mb-6 hover:text-indigo-300 transition">
+            ${destaque.titulo}
+          </h1>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed line-clamp-3">
+            ${destaque.resumo}
+          </p>
+        </div>
+        <div class="flex items-center text-xs text-slate-400 space-x-3 pt-6 border-t border-slate-700/60 mt-8">
+          <span>Leitura: ${destaque.tempo_leitura || 4} min</span>
+          <span>•</span>
+          <span>${destaque.data}</span>
+        </div>
+      `;
+      heroContainer.onclick = () => abrirModal(destaque);
 
-        card.innerHTML = `
-          <div class="w-full md:w-52 h-40 rounded-xl overflow-hidden bg-slate-100 flex-shrink-0 relative">
-            <img src="${art.imagem_url}" alt="${art.titulo}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=600&q=80'">
+      // 2. Widget Mais Lidas
+      artigos.slice(0, 3).forEach(art => {
+        const item = document.createElement('div');
+        item.className = "flex items-start gap-3 cursor-pointer group";
+        item.innerHTML = `
+          <div class="w-16 h-12 rounded-lg bg-slate-200 overflow-hidden flex-shrink-0">
+            <img src="${art.imagem_url}" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=400&q=80'">
           </div>
-          <div class="flex-grow flex flex-col justify-between h-full w-full">
-            <div>
-              <div class="flex items-center gap-2 mb-2">
-                <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full ${badgeCor} uppercase tracking-wider">${art.categoria}</span>
-                <span class="text-[11px] text-slate-400">• ${art.data}</span>
-              </div>
-              <h3 class="text-base md:text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition leading-snug mb-2">${art.titulo}</h3>
-              <p class="text-slate-600 text-xs md:text-sm line-clamp-2 leading-relaxed mb-4">${art.resumo}</p>
+          <div>
+            <h4 class="text-xs font-bold text-slate-800 group-hover:text-blue-600 transition line-clamp-2 leading-snug">${art.titulo}</h4>
+            <span class="text-[10px] text-slate-400">${art.data}</span>
+          </div>
+        `;
+        item.onclick = () => abrirModal(art);
+        maisLidasContainer.appendChild(item);
+      });
+
+      // 3. Grade com os Artigos Restantes
+      artigos.slice(1).forEach(art => {
+        const card = document.createElement('article');
+        card.className = "bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between group";
+        card.innerHTML = `
+          <div>
+            <div class="w-full h-44 rounded-xl overflow-hidden bg-slate-100 mb-4">
+              <img src="${art.imagem_url}" alt="${art.titulo}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=600&q=80'">
             </div>
-            <div class="flex items-center justify-between text-xs font-semibold text-indigo-600 pt-3 border-t border-slate-100">
-              <span>Ler notícia completa &rarr;</span>
-              <span class="text-slate-400 text-[11px] font-normal">${art.tempo_leitura || 3} min de leitura</span>
-            </div>
+            <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 uppercase tracking-wider">${art.categoria}</span>
+            <h3 class="text-base font-bold text-slate-900 group-hover:text-blue-600 transition leading-snug mt-2 mb-2">${art.titulo}</h3>
+            <p class="text-slate-600 text-xs line-clamp-2 leading-relaxed mb-4">${art.resumo}</p>
+          </div>
+          <div class="flex items-center justify-between text-xs font-semibold text-blue-600 pt-3 border-t border-slate-100">
+            <span>Ler matéria completa &rarr;</span>
+            <span class="text-slate-400 text-[11px] font-normal">${art.tempo_leitura || 3} min</span>
           </div>
         `;
         card.onclick = () => abrirModal(art);
-        container.appendChild(card);
-
-        // Inserção automática do anúncio Adsterra in-feed a cada 2 matérias
-        if ((index + 1) % 2 === 0) {
-          const banner = document.createElement('div');
-          banner.className = "w-full bg-slate-100 border border-slate-200 rounded-xl py-4 text-center text-xs text-slate-500 font-medium";
-          banner.innerText = "[ ESPAÇO PUBLICITÁRIO ADSTERRA: BANNER IN-FEED NATIVO ]";
-          container.appendChild(banner);
-        }
+        gradeContainer.appendChild(card);
       });
     }
 
     function filtrarCategoria(cat) {
       if (cat === 'todas') {
-        document.getElementById('titulo-secao').innerText = 'Últimas Publicações';
-        renderizarArtigos(todosArtigos);
+        document.getElementById('titulo-secao').innerText = 'Outras Notícias Importantes';
+        renderizarHeroEGrade(todosArtigos);
       } else {
         document.getElementById('titulo-secao').innerText = cat;
         const filtrados = todosArtigos.filter(a => a.categoria.toLowerCase().includes(cat.toLowerCase()));
-        renderizarArtigos(filtrados);
+        renderizarHeroEGrade(filtrados);
       }
     }
 
@@ -237,21 +262,20 @@
       const conteudo = document.getElementById('modal-conteudo');
       conteudo.innerHTML = `
         <div class="mb-4">
-          <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">${art.categoria} • ${art.data}</span>
+          <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">${art.categoria} • ${art.data}</span>
           <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-2 mb-3 leading-tight">${art.titulo}</h1>
         </div>
         <div class="w-full h-64 md:h-80 rounded-xl overflow-hidden mb-6 bg-slate-100">
           <img src="${art.imagem_url}" class="w-full h-full object-cover">
         </div>
-        <div class="p-4 bg-slate-50 border-l-4 border-indigo-600 rounded-r-xl text-xs md:text-sm text-slate-700 font-medium leading-relaxed mb-6">
+        <div class="p-4 bg-slate-50 border-l-4 border-blue-600 rounded-r-xl text-xs md:text-sm text-slate-700 font-medium leading-relaxed mb-6">
           ${art.resumo}
         </div>
         <div class="prose max-w-none text-sm text-slate-700 leading-relaxed space-y-4 border-t border-slate-100 pt-4">
           ${art.conteudo_html}
         </div>
         <div class="mt-8 p-4 bg-slate-100 rounded-xl text-center text-xs text-slate-500 font-medium">
-          <!-- ADSTERRA BANNER FIM DE ARTIGO -->
-          [ ESPAÇO PUBLICITÁRIO ADSTERRA: BANNER FIM DE MATÉRIA ]
+          [ESPAÇO PUBLICITÁRIO ADSTERRA: BANNER FIM DE MATÉRIA]
         </div>
       `;
       document.getElementById('artigo-modal').classList.remove('hidden');
